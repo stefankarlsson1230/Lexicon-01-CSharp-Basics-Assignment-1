@@ -97,7 +97,7 @@ If he/she miss the first guess ask the user if he/she wants to guess the number 
 ## Exercise 19 (Optional) 
 Print the following * pattern on console using loop 
 
-![Star pattern](../star-pattern.png)
+![Star pattern](star-pattern.png)
 
 
 
