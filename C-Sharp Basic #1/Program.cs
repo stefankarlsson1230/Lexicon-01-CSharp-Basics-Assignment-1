@@ -1,15 +1,12 @@
 ﻿// Removed all unnessecary ReadKey() from within the methods, and changed the method names to include the number in digits
 
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Threading.Tasks;
 using static System.Console;
 
 static void RunExercise1()
 {
     string firstName = "Stefan", lastName = "Karlsson";
 
-    WriteLine("Hello! I’m glad to inform you that you are the test subject of my very first assignment!");
+    WriteLine($"Hello {firstName} {lastName}! I’m glad to inform you that you are the test subject of my very first assignment!");
 }
 
 static void RunExercise2()
@@ -53,7 +50,13 @@ static void RunExercise3()
 
 static void RunExercise4()
 {
+    DateTime date = DateTime.Now;
 
+    WriteLine("Today in long date string: " + date.ToLongDateString());
+    WriteLine("today in short date string: " + date.ToShortDateString());
+
+    WriteLine($"Tomorrow: {date.AddDays(1).ToShortDateString()}");
+    WriteLine($"Yesterday: {date.AddDays(-1).ToShortDateString()}");
 }
 
 static void RunExercise5()
