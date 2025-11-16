@@ -99,46 +99,46 @@ Print the following * pattern on console using loop
 
 ![Star pattern](star-pattern.png)
 
-
-
-Exercise 20 (optional) 
+## Exercise 20 (optional) 
 Write a program that keeps asking the user to enter numbers, until he enters -1. Then displays a sum and average of all numbers entered before -1 
 
-Exercise 21 (Optional) 
+## Exercise 21 (Optional) 
 Write a program to print the Fibonacci series 
 
-Exercise 22 
+## Exercise 22 
 Write a program to calculate the area of triangle where the user has to pass height and width as a parameter 
 
-Exercise 23 
+## Exercise 23 
 Write a program to add 2, 3 and 4 float values using AddNumbers method (all three methods using the same name), pass these float values as a parameter, Print result inside the method. 
 
-Exercise 24(Optional) 
+## Exercise 24(Optional) 
 Write a program to find the greatest number in an array. Pass an array of 5 numbers as a parameter to a method and return a greatest number from the method and then print it. 
 
-Exercise 25 
+## Exercise 25 
 Write a swap function for swapping two numbers. Pass values as a parameter. Print the swapped values inside function as well at the next line where you called this function. 
 
-Exercise 26 
+## Exercise 26 
 Write a swap function for swapping two numbers. Pass values as a parameter using ref type. Print swapped values inside function as well at next line where you called this function. 
 
-Exercise 27 
+## Exercise 27 
 Let the user input any string, then check if the string is a palindrome sentence or not.
-Exercise 28 
+
+## Exercise 28 
 Ask user to enter any twelve positive integer numbers. Store these numbers to an array. Display all numbers and then separate the numbers into an odd number array and even number array. 
 
-Exercise 29(Optional) 
+## Exercise 29(Optional) 
 Create two arrays with arbitrary size and fill one with random numbers. Then copy over the numbers from the array with random numbers to the other array so that the even numbers are added (placed) first and odd numbers last in the array.
 
-Exercise 30 (Optional) 
+## Exercise 30 (Optional) 
 Create an array. Set the size of an array as a random number between 5 and 15. Sort this array without using sort method. 
 
-Exercise 31(Optional) 
+## Exercise 31(Optional) 
 Create an array. Set the size of an array as a random number smaller than 16. Fill in the array with random numbers (positive, smaller than 100, not repeated). Create another array of the same size and ask the user if he/she wants to fill in the array with either square or cube result of the values from previous array. 
 
-Exercise 32 
+## Exercise 32 
 Let the user input a string with numbers comma separated like “1,2,34,83,19,45”. Convert the number string to an array and find the min, the max and the average value. (Use strings split function if required)
-Exercise 33 : String manipulation 
+
+## Exercise 33 : String manipulation 
 A) Change string “The quick fox Jumped Over the DOG” to the string “The brown fox jumped over the lazy dog” using required string manipulation functions. 
 B) Enter any two words from console and check whether they are same words or not 
 C) Input word Donkey and display it as the word Monkey on the console. 
@@ -151,9 +151,10 @@ F) Actual string is "A friend is the asset of your life." and the expected strin
 G) Actual string is "My name is Nalini Phopase." Expected string: "Nalini Phopase" 
 H) Actual string is "Arrays are very common in programming, they look something like: [1,2,3,4,5]" Expected string: "[1,4,5,6,7,8]" 
 
-Exercise 34:
+## Exercise 34:
 Ask the user to enter his date of birth. Calculate his age and display it on console. 
-Exercise 35:
+
+## Exercise 35:
 Ask the user to enter his name and save it into a Name variable. 
 Greet the user by his name, and ask for his/her birth date. Call Calculate Age method from exercise to calculate the age of the user. 
  If the user is 18 or above 18 
@@ -180,4 +181,7 @@ Display a message that the coke has been served
 Display a message that no order options are available 
 Below (Figure 3) is a Flow chart diagram that shows the application flow.
 
-Exercise 36:
+![Coke or beer](coke-or-beer.png)
+
+## Exercise 36:
+![Math table 1 to 10](math-table.png)
