@@ -27,11 +27,11 @@ Result: Not consecutive
 Display today’s date in different date formats. Also display tomorrows date and yesterday’s date using short date format. 
 
 ## Exercise 5 
-A) Add any two integer numbers and store the sum result in a variable of type double. 
-B) Add any two decimal numbers (use variables of type double) and store the sum result in a variable of type integer. If you get any error try to resolve it. 
-C) Store an even number and an odd number in two different integer variables. Divide odd number by even number and display an accurate result. 
+a) Add any two integer numbers and store the sum result in a variable of type double. 
+b) Add any two decimal numbers (use variables of type double) and store the sum result in a variable of type integer. If you get any error try to resolve it. 
+c) Store an even number and an odd number in two different integer variables. Divide odd number by even number and display an accurate result. 
 
-#### MATHEMATICAL OPERATORS 
+## MATHEMATICAL OPERATORS 
 C# uses the standard order of operations to do calculations so (), *, / and % (modulo) has priority over + and -. 
 When dividing integers in c#, this is done with integer division. This means 10 / 3 will yield the result 3, instead of 3.333… as you might expect. This is due to that 10 is divisible 3 whole times with 3 with the rest of 1 which will be thrown away. 
 To get the rest, use the modulo operator like int rest = 10 % 3; which yields back 1. 

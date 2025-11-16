@@ -61,7 +61,27 @@ static void RunExercise4()
 
 static void RunExercise5()
 {
+    //  Add any two integer numbers and store the sum result in a variable of type double.
+    int int1 = 5;
+    int int2 = 8;
 
+    double sum1 = int1 + int2;
+    WriteLine($"{int1} + {int2} = {sum1}");
+
+    // Add any two decimal numbers (use variables of type double) and store the sum result in a variable of type integer.
+    // If you get any error try to resolve it.
+    double dec1 = 3.56;
+    double dec2 = 2.23;
+    
+    int sum2 = Convert.ToInt32(dec1 + dec2);
+    WriteLine($"{dec1} + {dec2} = {sum2} (rounded)");
+
+    // Store an even number and an odd number in two different integer variables. Divide odd number by even number and
+    // display an accurate result.
+    int even = 2;
+    int odd = 3;
+
+    WriteLine($"{odd}/{even} = {(double)odd / even}");
 }
 
 static void RunExercise6()
