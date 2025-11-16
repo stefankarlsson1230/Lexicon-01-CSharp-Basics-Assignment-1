@@ -1,9 +1,6 @@
 ﻿// Removed all unnessecary ReadKey() from within the methods, and changed the method names to include the number in digits
 
-using Microsoft.VisualBasic;
-using System.Collections.Generic;
 using static System.Console;
-using static System.Net.Mime.MediaTypeNames;
 
 static void RunExercise1()
 {
@@ -14,11 +11,19 @@ static void RunExercise1()
     string firstName = "Stefan", lastName = "Karlsson";
 
     WriteLine("Hello! I’m glad to inform you that you are the test subject of my very first assignment!");
-
 }
 
 static void RunExercise2()
 {
+    // Ask user to enter his firstname and lastname from the console and greet the user ‘Have a nice day!’
+    // Ex. "Hello Nalini Phopase! Have a nice day!"
+
+    Write("Firstname: ");
+    string firstName = ReadLine();
+    Write("Lastname: ");
+    string lastName = ReadLine();
+
+    Console.WriteLine($"Hello {firstName} {lastName}! Have a nice day!");
 }
 
 static void RunExercise3()
