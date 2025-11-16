@@ -3,96 +3,102 @@
 ## Prerequisite 
 You have to solve all the exercises in a single file. Just to make it more structured you have to solve each exercise in a separate method and call that method in a respective switch case. 
 Start with a given project which contains a sample code. Add new methods for next exercises. 
+*I added the provided code in the repo as Starter.cs*
 
-
-Exercise 1 (Name the method as ExerciseOne ) 
+## Exercise 1 (Name the method as ExerciseOne ) 
 Declare two string variables, one of them is going to store your first name and the other your last name, so assign them informative names. Then let the program print following output on a console: 
 “Hello <firstname> <lastname>! I’m glad to inform you that you are the test subject of my very first assignment!” 
 
-Exercise 2 
+## Exercise 2 
 Ask user to enter his firstname and lastname from the console and greet the user ‘Have a nice day!’ 
 Ex. "Hello Nalini Phopase! Have a nice day!" 
 
-Exercise 3 
+## Exercise 3 
 Ask user to enter two consecutive numbers and write the code to validate them (are they numbers?) and display message accordingly
 
-Example 1- user enters: 2, 3
+```
+Example 1 - user enters: 2, 3
 Result: Consecutive
 Example 2 – user enters: 4, 6
 Result: Not consecutive
+```
 
-Exercise 4 
+## Exercise 4 
 Display today’s date in different date formats. Also display tomorrows date and yesterday’s date using short date format. 
 
-Exercise 5 
+## Exercise 5 
 A) Add any two integer numbers and store the sum result in a variable of type double. 
 B) Add any two decimal numbers (use variables of type double) and store the sum result in a variable of type integer. If you get any error try to resolve it. 
 C) Store an even number and an odd number in two different integer variables. Divide odd number by even number and display an accurate result. 
 
-MATHEMATICAL OPERATORS 
+#### MATHEMATICAL OPERATORS 
 C# uses the standard order of operations to do calculations so (), *, / and % (modulo) has priority over + and -. 
 When dividing integers in c#, this is done with integer division. This means 10 / 3 will yield the result 3, instead of 3.333… as you might expect. This is due to that 10 is divisible 3 whole times with 3 with the rest of 1 which will be thrown away. 
 To get the rest, use the modulo operator like int rest = 10 % 3; which yields back 1. 
 To get the floating point result back, you need to tell the c# compiler to temporary treat either the nominator or denominator as a floating point number. This can be done by type casting either like double result = 10 / (double) 3; or explicitly set one as a floating point literal by adding a decimal to the end double result = 10.0 / 3; 
 Type casting will not affect the variable being type casted, and when type casting a decimal number to an integer, the number will be truncated. int rest = (int) 3.9999; 
 
-Exercise 6 
+## Exercise 6 
+```
 int x = 40; 
 int y = 20; 
 int z = 25; 
 int m = 15; 
 int e,f,g,h; 
+```
 
 Use appropriate order of precedence by using formula: x + y * z / m to get following result:
 e =100, f = 60 and g = 73.
 With same formula you can also get one more result – h. Try to find the right order of precedence and the value.
 
-Exercise 7 
+## Exercise 7 
 Ask user to enter any positive integer, check and display message whether number is even or odd 
 
-Exercise 8 
+## Exercise 8 
 Generate and store 20 random integer numbers in a list and separate those numbers in to two new lists. One with even numbers and one with odd numbers.
 
-Exercise 9 (Optional) 
+## Exercise 9 (Optional) 
 Ask user to enter a value of a radius. Calculate the area of a circle and a sphere and display the result on the console. 
 
-Exercise 10 
+## Exercise 10 
 Ask the user to enter any 10 numbers and store them in an array. Print only the negative numbers on the console.
  
-Exercise 11 
+## Exercise 11 
 Ask user to enter his body temperature in degree Celsius. Display him a message if he has a fever or not. 
 
-Exercise 12 
+## Exercise 12 
 Ask user to enter current year and validate it.
 
-Exercise 13 (Optional) 
+## Exercise 13 (Optional) 
 Write a program that asks user an arithmetic operator ('+','-','*' or '/') and two operands. Perform the corresponding calculation on the operands and display the result (use switch case) 
 
-Exercise 14 
+## Exercise 14 
 Ask user to enter his grade of exam (A, B, C, D, E) and print a relevant message for him as per the grade he has.
-Exercise 15 
+
+## Exercise 15 
 Ask user to enter any number smaller than 100. Print all values from 1 to the entered number in ascending and descending order. 
 Write the same program using for, while and do-while loop 
 
-
-
-
-
-
-Exercise 16
+## Exercise 16
 Ask user to enter some date and write code to define whether it is past, present or future year.
-Ex.: 2022-01-5 o/p: Present 
+```
+Ex.:2022-01-5 o/p: Present 
 2000-08-12 o/p: Past 
 2023-01-01 o/p: Future
-Exercise 17 (Optional) 
+```
+
+## Exercise 17 (Optional) 
 Print leap years between 1990 to current year using while loop 
 
-Exercise 18 
+## Exercise 18 
 Generate a random number and save it to a variable, SecretNumber. 
 If he/she miss the first guess ask the user if he/she wants to guess the number again. Repeat the guessing until user answers yes or guess the correct number. 
 
-Exercise 19 (Optional) 
+## Exercise 19 (Optional) 
 Print the following * pattern on console using loop 
+
+![Star pattern](..\star-pattern.png)
+
 
 
 Exercise 20 (optional) 
