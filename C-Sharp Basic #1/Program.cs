@@ -1,9 +1,19 @@
 ﻿// Removed all unnessecary ReadKey() from within the methods, and changed the method names to include the number in digits
 
+using Microsoft.VisualBasic;
+using System.Collections.Generic;
 using static System.Console;
+using static System.Net.Mime.MediaTypeNames;
 
 static void RunExercise1()
 {
+    // Declare two string variables, one of them is going to store your first name and the other your last
+    // name, so assign them informative names. Then let the program print following output on a console:
+    // “Hello! I’m glad to inform you that you are the test subject of my very first assignment!”
+
+    string firstName = "Stefan", lastName = "Karlsson";
+
+    WriteLine("Hello! I’m glad to inform you that you are the test subject of my very first assignment!");
 
 }
 
