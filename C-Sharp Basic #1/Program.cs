@@ -1,13 +1,12 @@
 ﻿// Removed all unnessecary ReadKey() from within the methods, and changed the method names to include the number in digits
 
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 using static System.Console;
 
 static void RunExercise1()
 {
-    // Declare two string variables, one of them is going to store your first name and the other your last
-    // name, so assign them informative names. Then let the program print following output on a console:
-    // “Hello! I’m glad to inform you that you are the test subject of my very first assignment!”
-
     string firstName = "Stefan", lastName = "Karlsson";
 
     WriteLine("Hello! I’m glad to inform you that you are the test subject of my very first assignment!");
@@ -15,9 +14,6 @@ static void RunExercise1()
 
 static void RunExercise2()
 {
-    // Ask user to enter his firstname and lastname from the console and greet the user ‘Have a nice day!’
-    // Ex. "Hello Nalini Phopase! Have a nice day!"
-
     Write("Firstname: ");
     string firstName = ReadLine();
     Write("Lastname: ");
@@ -28,8 +24,33 @@ static void RunExercise2()
 
 static void RunExercise3()
 {
+    int num1, num2;
 
+    try
+    {
+        Write("First number: ");
+        num1 = int.Parse(ReadLine());
+
+        Write("Second number: ");
+        num2 = int.Parse(ReadLine());
+
+        if (num1 + 1 == num2 || num1 - 1 == num2)
+        {
+            WriteLine("Consecutive");
+        }
+        else
+        {
+            WriteLine("Not consecutive");
+        }
+    }
+    catch
+    {
+        ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Only enter numbers!!");
+        ResetColor();
+    }
 }
+
 static void RunExercise4()
 {
 
