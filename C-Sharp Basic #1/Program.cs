@@ -122,7 +122,36 @@ static void RunExercise7()
 
 static void RunExercise8()
 {
+    List<int> masterList = new();
+    List<int> odd = new();
+    List<int> even = new();
+    Random die = new();
 
+    // Generate numbers 0-99
+    for(int i = 1; i <= 20; i++)
+    {
+        masterList.Add(die.Next(100));
+    }
+
+    // Separate numbers
+    foreach(int number in masterList)
+    {
+        if (number % 2 == 0) even.Add(number);
+        else odd.Add(number);
+    }
+
+    // Show result
+    Write("All numbers: ");
+    foreach (int number in masterList) Write($"{number} ");
+    WriteLine();
+
+    Write("Even numbers: ");
+    foreach (int number in even) Write($"{number} ");
+    WriteLine();
+
+    Write("Odd numbers: ");
+    foreach (int number in odd) Write($"{number} ");
+    WriteLine();
 }
 
 static void RunExercise9()
