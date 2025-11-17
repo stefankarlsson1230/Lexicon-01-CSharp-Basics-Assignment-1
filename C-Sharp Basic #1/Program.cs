@@ -202,6 +202,13 @@ static void RunExercise11()
 
 static void RunExercise12()
 {
+    int year;
+
+    Write("Enter current year: ");
+    year = int.Parse(ReadLine()!);
+
+    if (DateTime.Now.Year == year) WriteLine($"Yes that is right, the current year is {DateTime.Now.Year}");
+    else WriteLine("No, that is not correct!");
 }
 
 static void RunExercise13()
