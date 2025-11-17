@@ -256,9 +256,34 @@ static void RunExercise13()
             break;
     }
 }
+
 static void RunExercise14()
 {
+    Write("What is your grade? (A, B, C, D, E): ");
+    string grade = ReadLine().ToUpper()!;
 
+    switch (grade)
+    {
+        case "A":
+            WriteLine($"A is an excellent grade!");
+            break;
+        case "B":
+            WriteLine($"B is a good grade!");
+            break;
+        case "C":
+            WriteLine($"C is a decent grade!");
+            break;
+        case "D":
+            WriteLine($"D is not a very good grade!");
+            break;
+        case "E":
+            WriteLine($"E is a really bad grade!");
+            break;
+        default:
+            WriteLine($"That is not a grade!");
+            break;
+    }
+    
 }
 
 static void RunExercise15()
