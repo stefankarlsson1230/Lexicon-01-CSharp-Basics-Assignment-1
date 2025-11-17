@@ -107,7 +107,17 @@ static void RunExercise6()
 
 static void RunExercise7()
 {
+    Write("Enter a positive integer: ");
+    int number = int.Parse(ReadLine()!);
 
+    if (number % 2 == 0)
+    {
+        WriteLine($"{number} is even");
+    }
+    else
+    {
+        WriteLine($"{number} is odd");
+    }
 }
 
 static void RunExercise8()
