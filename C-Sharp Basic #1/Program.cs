@@ -169,7 +169,24 @@ static void RunExercise9()
 
 static void RunExercise10()
 {
+    double[] numbers = new double[10];
 
+    WriteLine("Enter 10 numbers.");
+
+    // Input
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Write($"Number {i+1}: ");
+        numbers[i] = double.Parse(ReadLine()!);
+    }
+
+    // Output
+    Write("Negative numbers: ");
+    foreach(double number in numbers)
+    {
+        if (number < 0) Write($"{number} ");
+    }
+    WriteLine();
 }
 
 static void RunExercise11()
