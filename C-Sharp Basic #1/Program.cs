@@ -213,7 +213,48 @@ static void RunExercise12()
 
 static void RunExercise13()
 {
+    string op;
+    double num1, num2;
+    bool correctInput = false;
 
+    // Input
+    do
+    {
+        Write("Enter operator (+,-,* or /): ");
+        op = ReadLine()!;
+
+        correctInput = op switch
+        {
+            "+" => true,
+            "-" => true,
+            "*" => true,
+            "/" => true,
+            _ => false
+        };
+    } while (!correctInput);
+
+    Write("Operand 1: ");
+    num1 = double.Parse(ReadLine()!);
+
+    Write("Operand 2: ");
+    num2 = double.Parse(ReadLine()!);
+
+    // Result
+    switch (op)
+    {
+        case "+":
+            WriteLine($"{num1} {op} {num2} = {num1 + num2}");
+            break;
+        case "-":
+            WriteLine($"{num1} {op} {num2} = {num1 - num2}");
+            break;
+        case "*":
+            WriteLine($"{num1} {op} {num2} = {num1 * num2}");
+            break;
+        case "/":
+            WriteLine($"{num1} {op} {num2} = {num1 / num2}");
+            break;
+    }
 }
 static void RunExercise14()
 {
