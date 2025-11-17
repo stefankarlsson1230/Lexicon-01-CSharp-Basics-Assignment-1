@@ -288,7 +288,52 @@ static void RunExercise14()
 
 static void RunExercise15()
 {
+    int counter;
 
+    Write("Enter a number below 100: ");
+    int number = int.Parse(ReadLine()!);
+
+    WriteLine();
+
+    WriteLine("With a For-loop");
+    for (int i = 1; i <= number; i++) Write($"{i} ");
+    WriteLine();
+    for (int i = number; i >= 1; i--) Write($"{i} ");
+    
+    WriteLine("\n");
+
+    WriteLine("With a While-loop");
+    counter = 1;
+    while (counter <= number)
+    {
+        Write($"{counter} ");
+        counter++;
+    }
+    WriteLine();
+    counter = number;
+    while (counter >= 1)
+    {
+        Write($"{counter} ");
+        counter--;
+    }
+
+    WriteLine("\n");
+
+    WriteLine("With a Do-While-loop");
+    counter = 1;
+    do
+    {
+        Write($"{counter} ");
+        counter++;
+    } while(counter <= number );
+    WriteLine();
+    counter = number;
+    do
+    {
+        Write($"{counter} ");
+        counter--;
+    } while (counter >= 1);
+    WriteLine("\n");
 }
 
 static void RunExercise16()
