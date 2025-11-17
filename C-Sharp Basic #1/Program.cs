@@ -86,7 +86,23 @@ static void RunExercise5()
 
 static void RunExercise6()
 {
+    int x = 40;
+    int y = 20;
+    int z = 25;
+    int m = 15;
+    int e, f, g, h;
 
+    e = (x + y) * z / m;    // 100
+    WriteLine($"({x} + {y}) * {z} / {m} = {e}"); 
+
+    f = (x + y) * (z / m);  // 60
+    WriteLine($"({x} + {y}) * ({z} / {m}) = {f}");
+
+    g = x + y * z / m;      // 73
+    WriteLine($"{x} + {y} * {z} / {m} = {g}");
+
+    h = (x + y * z) / m;    // 36
+    WriteLine($"({x} + {y} * {z}) / {m} = {h}");
 }
 
 static void RunExercise7()
