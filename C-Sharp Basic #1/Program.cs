@@ -156,7 +156,15 @@ static void RunExercise8()
 
 static void RunExercise9()
 {
+    // Area of Circle = r*r*PI       Area of Sphere = 4*r*r*PI
 
+    Write("Radius: ");
+    double radius = double.Parse(ReadLine()!);
+
+    double areaOfCircle = Math.Pow(radius, 2) * Math.PI;
+    double areaOfSphere = 4 * areaOfCircle;
+
+    Console.WriteLine($"This would give a Circle area of {areaOfCircle:#.##}, and a Sphere area of {areaOfSphere:#.##}");
 }
 
 static void RunExercise10()
