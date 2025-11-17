@@ -191,6 +191,13 @@ static void RunExercise10()
 
 static void RunExercise11()
 {
+    double temp;
+
+    Write("Enter your body temperature in degrees Celsius: ");
+    temp = double.Parse(ReadLine()!);
+
+    if (temp < 37.5) WriteLine("No fever");
+    else WriteLine("You have a fever");
 }
 
 static void RunExercise12()
