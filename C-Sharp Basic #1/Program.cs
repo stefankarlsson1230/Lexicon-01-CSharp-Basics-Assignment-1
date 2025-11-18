@@ -408,7 +408,27 @@ static void RunExercise19()
 
 static void RunExercise20()
 {
+    double sum = 0, number = 0, noOfnumbers = 0;
 
+    WriteLine("Finish by enter -1");
+
+    while(true)
+    {
+        Write("Enter number: ");
+        number = double.Parse(ReadLine()!);
+
+        if (number == -1)
+        {
+            break;
+        }
+        else
+        {
+            noOfnumbers++;
+            sum += number;
+        }
+    }
+
+    WriteLine($"You entered {noOfnumbers} numbers. The sum was {sum:#.##} and the average {sum/noOfnumbers:#.##}");
 }
 
 static void RunExercise21()
