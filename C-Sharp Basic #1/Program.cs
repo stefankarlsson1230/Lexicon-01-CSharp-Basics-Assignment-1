@@ -398,7 +398,12 @@ static void RunExercise18()
 
 static void RunExercise19()
 {
-
+    for(int i = 1; i <= 5; i++)
+    {
+        for (int j = 0; j <= i - 1; j++) Write(" ");
+        for (int k = 1; k <= 6 - i; k++) Write("* ");
+        WriteLine();
+    }
 }
 
 static void RunExercise20()
