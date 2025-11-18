@@ -1,4 +1,5 @@
-﻿// Removed all unnessecary ReadKey() from within the methods, and changed the method names to include the number in digits
+﻿// Removed all unnessecary ReadKey() from within the methods, and changed the method names to include the number in digits becuase it made it easier to 
+// expand the list of methods and the cases in the swith statement.
 
 using static System.Console;
 
@@ -366,7 +367,33 @@ static void RunExercise17()
 
 static void RunExercise18()
 {
+    int secretNumber = new Random().Next(1, 11);
+    int guess;
 
+    do
+    {
+        Write("Guess a number (1 - 10): ");
+        guess = int.Parse(ReadLine()!);
+
+        if (guess == secretNumber)
+        {
+            WriteLine("Congratulations, you guess it!");
+            break;
+        }
+        else
+        {
+            string answer;
+            WriteLine("Sorry, wrong number!");
+            
+            do
+            {
+                Write("Do you want to guess again? (yes/no): ");
+                answer = ReadLine()!.ToLower();
+            } while(answer != "yes" && answer != "no");
+
+            if (answer == "no") break;  
+        }
+    } while (true);
 }
 
 static void RunExercise19()
