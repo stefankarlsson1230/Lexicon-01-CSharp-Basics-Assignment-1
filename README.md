@@ -82,9 +82,9 @@ Write the same program using for, while and do-while loop
 ## Exercise 16
 Ask user to enter some date and write code to define whether it is past, present or future year.
 ```
-Ex.:2022-01-5 o/p: Present 
-2000-08-12 o/p: Past 
-2023-01-01 o/p: Future
+2022-01-5: Present 
+2000-08-12: Past 
+2023-01-01: Future
 ```
 
 ## Exercise 17 (Optional) 

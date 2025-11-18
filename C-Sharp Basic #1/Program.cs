@@ -338,7 +338,14 @@ static void RunExercise15()
 
 static void RunExercise16()
 {
+    DateTime now = DateTime.Now.Date;
 
+    Write("Enter a date (yyyy-mm-dd): ");
+    DateTime date = DateTime.Parse(ReadLine()!).Date;   // To be sure the time component is the same as in DateTime.Now.Date
+
+    if (date == now) WriteLine($"{date.ToShortDateString()}: Present");
+    else if (date < now) WriteLine($"{date.ToShortDateString()}: Past");
+    else WriteLine($"{date.ToShortDateString()}: Future");
 }
 
 static void RunExercise17()
