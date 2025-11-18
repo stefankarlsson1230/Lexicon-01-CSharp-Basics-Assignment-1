@@ -350,7 +350,18 @@ static void RunExercise16()
 
 static void RunExercise17()
 {
+    // How to check for leap year: It has to be divisible by 4. If this year is divisible by 100, it has to be divisible by 400 to be a leap year.
 
+    Write("Leap years: ");
+    for(int year = 1990; year <= DateTime.Now.Year; year++)
+    {
+        if(year % 4 == 0)
+        {
+            if (year % 100 == 0 && year % 400 != 0) break;
+            Write($"{year} ");
+        }
+    }
+    WriteLine();
 }
 
 static void RunExercise18()
