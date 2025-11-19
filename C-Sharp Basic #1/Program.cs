@@ -532,7 +532,22 @@ static void RunExercise25()
 
 static void RunExercise26()
 {
+    // Local functions
+    void Swap(ref int x, ref int y)
+    {
+        int temp = x;
+        x = y;
+        y = temp;
 
+        WriteLine($"Inside Swap: x = {x}, y = {y}");
+    }
+
+    // Main program
+    int x = 5, y = 10;
+
+    WriteLine($"Before Swap: x = {x}, y = {y}");
+    Swap(ref x, ref y);
+    WriteLine($"After Swap: x = {x}, y = {y}");
 }
 
 static void RunExercise27()
