@@ -455,6 +455,17 @@ static void RunExercise21()
 
 static void RunExercise22()
 {
+    // Methods 
+    double AreaOfTriangle(double height, double width) => (height * width) / 2;
+
+    // Main program
+    WriteLine("This will calculate the area of a triangle");
+    Write("Height: ");
+    double height = double.Parse(ReadLine()!);
+    Write("Width: ");
+    double width = double.Parse(ReadLine()!);
+
+    WriteLine($"Area: {AreaOfTriangle(height, width):#.##}");
 }
 
 static void RunExercise23()
