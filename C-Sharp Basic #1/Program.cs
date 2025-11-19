@@ -552,11 +552,29 @@ static void RunExercise26()
 
 static void RunExercise27()
 {
+    // I will not ignore white spaces or odd characters. All characters count.
 
+    Write("Enter a word or sentence: ");
+    string word = ReadLine()!.ToLower();
+
+    bool isPalindrome = true;
+
+    for(int i = 0; i <= word.Length / 2; i++)
+    {
+        if (word[i] != word[word.Length - 1 - i])
+        {
+            isPalindrome = false;
+            break;
+        }
+    }
+
+    if (isPalindrome) WriteLine($"{word} is a palindrome");
+    else WriteLine($"{word} is NOT a palindrome");
 }
 
 static void RunExercise28()
 {
+
 
 }
 
