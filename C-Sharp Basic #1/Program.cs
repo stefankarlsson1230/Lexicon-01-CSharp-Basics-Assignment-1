@@ -2,6 +2,7 @@
 // expand the list of methods and the cases in the swith statement.
 
 using System.Collections.Concurrent;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 using static System.Console;
 
@@ -460,7 +461,7 @@ static void RunExercise22()
     // Local functions 
     double AreaOfTriangle(double height, double width) => (height * width) / 2;
 
-    // Main method
+    // Main program
     WriteLine("This will calculate the area of a triangle");
     Write("Height: ");
     double height = double.Parse(ReadLine()!);
@@ -491,7 +492,22 @@ static void RunExercise23()
 
 static void RunExercise24()
 {
+    // Local functions
+    int GetLargestNumber(int[] values)    // Expect an array with at least one number
+    {
+        int temp = values[0];
 
+        foreach (int number in values) if (number > temp) temp = number;
+
+        return temp;
+    }
+
+    // Main program
+    int[] numbers = [ 4, -5, 11, -88, 2 ];
+
+    Write("Numbers: ");
+    foreach (int number in numbers) Write($"{number} ");
+    WriteLine($"\nThe largets number is {GetLargestNumber(numbers)}");
 }
 
 static void RunExercise25()
