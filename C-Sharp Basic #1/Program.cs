@@ -433,6 +433,24 @@ static void RunExercise20()
 
 static void RunExercise21()
 {
+    // The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones, typically starting with 0 and 1
+
+    int last = 0, present = 1, max;
+
+    Write("Shows the fibonacci series up until the following number: ");
+    max = int.Parse(ReadLine()!);
+    
+    WriteLine();
+
+    Write("0 ");
+    while(true)
+    {
+        Write($"{present} ");
+        int temp = last;
+        last = present;
+        present = temp + last;
+        if (present > max) break;
+    }
 }
 
 static void RunExercise22()
