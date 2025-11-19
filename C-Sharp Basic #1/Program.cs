@@ -1,6 +1,8 @@
 ﻿// Removed all unnessecary ReadKey() from within the methods, and changed the method names to include the number in digits becuase it made it easier to 
 // expand the list of methods and the cases in the swith statement.
 
+using System.Collections.Concurrent;
+using System.Runtime.CompilerServices;
 using static System.Console;
 
 static void RunExercise1()
@@ -455,10 +457,10 @@ static void RunExercise21()
 
 static void RunExercise22()
 {
-    // Methods 
+    // Local functions 
     double AreaOfTriangle(double height, double width) => (height * width) / 2;
 
-    // Main program
+    // Main method
     WriteLine("This will calculate the area of a triangle");
     Write("Height: ");
     double height = double.Parse(ReadLine()!);
@@ -470,8 +472,23 @@ static void RunExercise22()
 
 static void RunExercise23()
 {
+    // Overloading local functions does not work, so I have to declare them inside of a new Class, "Excercise23" at the bottom of this file.
 
+    WriteLine("Enter 4 numbers");
+    Write("Number 1: ");
+    double num1 = double.Parse(ReadLine()!);
+    Write("Number 2: ");
+    double num2 = double.Parse(ReadLine()!);
+    Write("Number 3: ");
+    double num3 = double.Parse(ReadLine()!);
+    Write("Number 4: ");
+    double num4 = double.Parse(ReadLine()!);
+
+    Excercise23.AddNumbers(num1, num2);
+    Excercise23.AddNumbers(num1, num2, num3);
+    Excercise23.AddNumbers(num1, num2, num3, num4);
 }
+
 static void RunExercise24()
 {
 
@@ -678,3 +695,11 @@ while (keepAlive)
 }
 
 
+// Classes 
+
+class Excercise23
+{
+    public static void AddNumbers(double num1, double num2) => WriteLine($"{num1} + {num2} = {num1 + num2}");
+    public static void AddNumbers(double num1, double num2, double num3) => WriteLine($"{num1} + {num2} + {num3} = {num1 + num2 + num3}");
+    public static void AddNumbers(double num1, double num2, double num3, double num4) => WriteLine($"{num1} + {num2} + {num3} + {num4} = {num1 + num2 + num3 + num4}");
+}
