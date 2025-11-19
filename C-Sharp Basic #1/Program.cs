@@ -574,8 +574,41 @@ static void RunExercise27()
 
 static void RunExercise28()
 {
+    // These arrays should get filled with the defaul value 0
+    int[] numbers = new int[12];
+    int[] odd = new int[12];
+    int[] even = new int[12];
 
+    // Get the numbers - no error checking
+    WriteLine("Enter 12 positive integers");    
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Write($"Number {i + 1}: ");
+        numbers[i] = int.Parse(ReadLine());
+    }
 
+    // Sorting
+    int oddIndex = 0, evenIndex = 0;
+
+    foreach(int number in numbers)
+    {
+        if (number % 2 == 0) even[evenIndex++] = number;
+        else odd[oddIndex++] = number;
+    }
+    WriteLine();
+
+    // Output
+    Write("All numbers: ");
+    foreach (int number in numbers) Write($"{number} ");
+    WriteLine();
+
+    Write("Even numbers: ");
+    for (int i = 0; i < evenIndex; i++) Write($"{even[i]} ");
+    WriteLine();
+
+    Write("Odd numbers: ");
+    for (int i = 0; i < oddIndex; i++) Write($"{odd[i]} ");
+    WriteLine();
 }
 
 static void RunExercise29()
