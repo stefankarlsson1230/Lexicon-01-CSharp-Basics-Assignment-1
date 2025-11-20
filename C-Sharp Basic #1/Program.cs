@@ -1,10 +1,9 @@
 ﻿// Removed all unnessecary ReadKey() from within the methods, and changed the method names to include the number in digits becuase it made it easier to 
 // expand the list of methods and the cases in the swith statement.
 
-using System.Collections.Concurrent;
-using System.Globalization;
-using System.Runtime.CompilerServices;
 using static System.Console;
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise1()
 {
@@ -12,6 +11,8 @@ static void RunExercise1()
 
     WriteLine($"Hello {firstName} {lastName}! I’m glad to inform you that you are the test subject of my very first assignment!");
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise2()
 {
@@ -22,6 +23,8 @@ static void RunExercise2()
 
     Console.WriteLine($"Hello {firstName} {lastName}! Have a nice day!");
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise3()
 {
@@ -52,6 +55,8 @@ static void RunExercise3()
     }
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise4()
 {
     DateTime date = DateTime.Now;
@@ -62,6 +67,8 @@ static void RunExercise4()
     WriteLine($"Tomorrow: {date.AddDays(1).ToShortDateString()}");
     WriteLine($"Yesterday: {date.AddDays(-1).ToShortDateString()}");
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise5()
 {
@@ -88,6 +95,8 @@ static void RunExercise5()
     WriteLine($"{odd}/{even} = {(double)odd / even}");
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise6()
 {
     int x = 40;
@@ -109,6 +118,8 @@ static void RunExercise6()
     WriteLine($"({x} + {y} * {z}) / {m} = {h}");
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise7()
 {
     Write("Enter a positive integer: ");
@@ -123,6 +134,8 @@ static void RunExercise7()
         WriteLine($"{number} is odd");
     }
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise8()
 {
@@ -158,6 +171,8 @@ static void RunExercise8()
     WriteLine();
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise9()
 {
     // Area of Circle = r*r*PI       Area of Sphere = 4*r*r*PI
@@ -170,6 +185,8 @@ static void RunExercise9()
 
     Console.WriteLine($"This would give a Circle area of {areaOfCircle:#.##}, and a Sphere area of {areaOfSphere:#.##}");
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise10()
 {
@@ -193,6 +210,8 @@ static void RunExercise10()
     WriteLine();
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise11()
 {
     double temp;
@@ -204,6 +223,8 @@ static void RunExercise11()
     else WriteLine("You have a fever");
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise12()
 {
     int year;
@@ -214,6 +235,8 @@ static void RunExercise12()
     if (DateTime.Now.Year == year) WriteLine($"Yes that is right, the current year is {DateTime.Now.Year}");
     else WriteLine("No, that is not correct!");
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise13()
 {
@@ -261,6 +284,8 @@ static void RunExercise13()
     }
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise14()
 {
     Write("What is your grade? (A, B, C, D, E): ");
@@ -289,6 +314,8 @@ static void RunExercise14()
     }
     
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise15()
 {
@@ -340,6 +367,8 @@ static void RunExercise15()
     WriteLine("\n");
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise16()
 {
     DateTime now = DateTime.Now.Date;
@@ -351,6 +380,8 @@ static void RunExercise16()
     else if (date < now) WriteLine($"{date.ToShortDateString()}: Past");
     else WriteLine($"{date.ToShortDateString()}: Future");
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise17()
 {
@@ -367,6 +398,8 @@ static void RunExercise17()
     }
     WriteLine();
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise18()
 {
@@ -399,6 +432,8 @@ static void RunExercise18()
     } while (true);
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise19()
 {
     for(int i = 1; i <= 5; i++)
@@ -408,6 +443,8 @@ static void RunExercise19()
         WriteLine();
     }
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise20()
 {
@@ -434,6 +471,8 @@ static void RunExercise20()
     WriteLine($"You entered {noOfnumbers} numbers. The sum was {sum:#.##} and the average {sum/noOfnumbers:#.##}");
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise21()
 {
     // The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones, typically starting with 0 and 1
@@ -456,6 +495,8 @@ static void RunExercise21()
     }
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise22()
 {
     // Local functions 
@@ -470,6 +511,8 @@ static void RunExercise22()
 
     WriteLine($"Area: {AreaOfTriangle(height, width):#.##}");
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise23()
 {
@@ -489,6 +532,8 @@ static void RunExercise23()
     Excercise23.AddNumbers(num1, num2, num3);
     Excercise23.AddNumbers(num1, num2, num3, num4);
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise24()
 {
@@ -510,6 +555,8 @@ static void RunExercise24()
     WriteLine($"\nThe largets number is {GetLargestNumber(numbers)}");
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise25()
 {
     // Local functions
@@ -530,6 +577,8 @@ static void RunExercise25()
     WriteLine($"After Swap: x = {x}, y = {y}");
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise26()
 {
     // Local functions
@@ -549,6 +598,8 @@ static void RunExercise26()
     Swap(ref x, ref y);
     WriteLine($"After Swap: x = {x}, y = {y}");
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise27()
 {
@@ -571,6 +622,8 @@ static void RunExercise27()
     if (isPalindrome) WriteLine($"{word} is a palindrome");
     else WriteLine($"{word} is NOT a palindrome");
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise28()
 {
@@ -611,45 +664,90 @@ static void RunExercise28()
     WriteLine();
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise29()
 {
+    int[] random = new int[10];
+    int[] sorted = new int[10];
 
+    Random dice = new();
+
+    // Generate numbers
+    for (int i = 0; i < random.Length; i++)
+    {
+        random[i] = dice.Next(1, 101);
+    }
+
+    // Sorting
+    int front = 0, end = sorted.Length - 1;
+
+    foreach (int number in random)
+    {
+        if (number % 2 == 0) sorted[front++] = number;
+        else sorted[end--] = number;
+    }
+
+    // Output
+    Write("Original: ");
+    foreach (int number in random) Write($"{number} ");
+    WriteLine();
+
+    Write("Sorted: ");
+    foreach (int number in sorted) Write($"{number} ");
+    WriteLine();
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise30()
 {
 
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise31()
 {
 
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise32()
 {
 
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise33()
 {
 
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise34()
 {
 
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise35()
 {
 
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
 static void RunExercise36()
 {
 
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 bool keepAlive = true;
 while (keepAlive)
@@ -791,8 +889,7 @@ while (keepAlive)
     }
 }
 
-
-// Classes 
+// -------------------------------------------------------------- Classes -----------------------------------------------------------------------
 
 class Excercise23
 {
