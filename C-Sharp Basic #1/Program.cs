@@ -1,6 +1,7 @@
 ﻿// Removed all unnessecary ReadKey() from within the methods, and changed the method names to include the number in digits becuase it made it easier to 
 // expand the list of methods and the cases in the swith statement.
 
+using Microsoft.VisualBasic.FileIO;
 using static System.Console;
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------
@@ -702,7 +703,44 @@ static void RunExercise29()
 
 static void RunExercise30()
 {
+    Random dice = new();
+    int[] numbers = new int[dice.Next(5, 16)];
 
+    // Generating numbers
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = dice.Next(1, 101);
+    }
+
+    // Output unsorted list
+    Write("Original: ");
+    foreach (int number in numbers) Write($"{number} ");
+    WriteLine();
+
+    // Sorting with bubbelsort
+    bool sorted;
+    int temp;
+
+    while (true)
+    {
+        sorted = true;
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] < numbers[i-1])
+            {
+                temp = numbers[i - 1];
+                numbers[i - 1] = numbers[i];
+                numbers[i] = temp;
+                sorted = false;
+            }
+        }
+        if (sorted) break;
+    }
+
+    // Output sorted list
+    Write("Sorted: ");
+    foreach (int number in numbers) Write($"{number} ");
+    WriteLine();
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------
