@@ -747,13 +747,56 @@ static void RunExercise30()
 
 static void RunExercise31()
 {
+    Random dice = new();
+    int[] numbers = new int[dice.Next(1, 16)];
 
+    // Creating array with no repeating numbers
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        int tmp = dice.Next(1, 100);
+        bool exists = false;
+        for (int j = 0; j < i; j++)
+        {
+            if (numbers[j] == tmp)
+            {
+                exists = true;
+                break;
+            }
+        }
+
+        if (exists) i--;
+        else numbers[i] = tmp;
+    }
+
+    // Input
+    int[] computed = new int[numbers.Length];
+    int choice = 0;
+
+    do
+    {
+        Write("Do you want squres(2) or cubes (3)?: ");
+        choice = int.Parse(ReadLine()!);
+    } while (choice != 2 && choice != 3);
+
+    // Calculations
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        computed[i] = (int)Math.Pow(numbers[i], choice);
+    }
+
+    // Output
+    Write("\nOriginal: ");
+    foreach(int number in numbers) Write($"{number} ");
+    Write("\nComputed: ");
+    foreach (int number in computed) Write($"{number} ");
+    WriteLine("\n");
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------
 
 static void RunExercise32()
 {
+
 
 }
 
