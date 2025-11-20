@@ -955,7 +955,87 @@ static void RunExercise34()
 
 static void RunExercise35()
 {
+    // Local Functions
+    int CalculateAge()
+    {
+        DateTime birthDate;
+        int age = 0;
+        bool tryAgain;
 
+        do
+        {
+            try
+            {
+                tryAgain = false;
+                Write("What is your birthdate (yyyy-mm-dd)?: ");
+                birthDate = DateTime.Parse(ReadLine());
+
+                age = DateTime.Now.Year - birthDate.Year;
+                if (birthDate.Month >= DateTime.Now.Month && birthDate.Day > DateTime.Now.Day) age--;
+            }
+            catch (Exception e)
+            {
+                WriteLine(e.Message);
+                tryAgain = true;
+            }
+        } while (tryAgain);
+
+        return age;
+    }
+
+    bool AskQuestion(string question)
+    {
+        string answer = "";
+
+        do
+        {
+            Write(question);
+            answer = ReadLine().ToLower();
+        } while (answer != "y" && answer != "n");
+
+        if (answer == "y") return true;
+        else return false;
+    }
+
+    // Main program
+    string name, birthDate;
+    int age;
+
+    Write("Enter name: ");
+    name = ReadLine();
+
+    WriteLine($"Hello {name}!");
+    age = CalculateAge();
+
+    if (age >= 18)
+    {
+        if (AskQuestion("Do you want to order a beer(y/n)?: "))
+        {
+            WriteLine("Your beer is on it's way!");
+        }
+        else
+        {
+            if(AskQuestion("Do you want to order a coke(y/n)?: "))
+            {
+                WriteLine("Your coke is on it's way!");
+            }
+            else
+            {
+                WriteLine("I'm sorry but we are out of options.");
+            }
+        }  
+    }
+    else
+    {
+        if (AskQuestion("Do you want to order a coke(y/n)?: "))
+        {
+            WriteLine("Your coke is on it's way!");
+        }
+        else
+        {
+            WriteLine("I'm sorry but we are out of options.");
+        }
+    }
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------
