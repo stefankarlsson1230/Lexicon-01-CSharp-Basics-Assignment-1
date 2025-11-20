@@ -938,7 +938,17 @@ static void RunExercise33()
 
 static void RunExercise34()
 {
+    DateTime birthDate;
+    int age;
 
+    Write("Enter your birthdate (yyyy-mm-dd): ");
+    birthDate = DateTime.Parse(ReadLine());
+
+    age = DateTime.Now.Year - birthDate.Year;
+
+    if (birthDate.Month >= DateTime.Now.Month && birthDate.Day > DateTime.Now.Day) age--;
+    
+    WriteLine($"You are {age} years old");
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------
