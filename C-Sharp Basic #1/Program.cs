@@ -796,8 +796,34 @@ static void RunExercise31()
 
 static void RunExercise32()
 {
+    string numberString;
+    string[] stringArray;
+    int[] numbers;
 
+    WriteLine("Enter numbers separated by commas (like 1,2,34,83,19,45): ");
+    numberString = ReadLine()!;
+    stringArray = numberString.Split(",", StringSplitOptions.TrimEntries);
 
+    // Calculations
+    int noOfNumbers = stringArray.Length;
+    int sum = 0, min = int.MaxValue, max = int.MinValue;
+
+    numbers = new int[noOfNumbers];
+
+    for (int i = 0; i < stringArray.Length; i++)
+    {
+        numbers[i] = int.Parse(stringArray[i]);
+    }
+
+    foreach (int number in numbers)
+    {
+        sum += number;
+        if (number < min) min = number;
+        if (number > max) max = number;
+    }
+
+    // Output
+    WriteLine($"Min: {min}     Max: {max}     Average: {((double)sum /noOfNumbers):#.##}");
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------
