@@ -2,6 +2,7 @@
 // expand the list of methods and the cases in the swith statement.
 
 using Microsoft.VisualBasic.FileIO;
+using System.ComponentModel.DataAnnotations;
 using static System.Console;
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------
@@ -830,7 +831,107 @@ static void RunExercise32()
 
 static void RunExercise33()
 {
+    // A) Change string “The quick fox Jumped Over the DOG” to the string “The brown fox jumped over the lazy dog”
+    // using required string manipulation functions.
 
+    string originalA = "The quick fox Jumped Over the DOG";
+    string finalA = "The quick fox Jumped Over the DOG";
+
+    finalA = finalA[0] + finalA.Substring(1).ToLower();
+    finalA = finalA.Replace("quick", "brown");
+    finalA = finalA.Insert(finalA.IndexOf("dog"), "lazy ");
+
+    WriteLine("Original: " + originalA);
+    WriteLine("Final: " + finalA);
+
+    WriteLine("\n");
+
+
+    // B) Enter any two words from console and check whether they are same words or not
+    // The equality operator (==) works for strings even though they are of reference type. 
+    string word1, word2;
+
+    Write("Enter first word: ");
+    word1 = ReadLine();
+
+    Write("Enter second word: ");
+    word2 = ReadLine();
+
+    if (word1 == word2) WriteLine("They are the same (equal)!");
+    else WriteLine("They are nog equal!");
+
+    WriteLine("\n");
+
+
+    // C) Input word Donkey and display it as the word Monkey on the console.
+    string donkey;
+
+    Write("Enter the word \"Donkey\": ");
+    donkey = ReadLine()!;
+
+    WriteLine("M" + donkey.Substring(1));
+
+    WriteLine("\n");
+
+
+    // D) Replace ‘I’ with ‘We’ and ‘am’ with ‘are’ in given text below.
+    // “I am going to visit Kolmården zoo tomorrow. I am a big fan of the dolphin show.
+    // I may watch all dolphin shows during the day.I would like to take a gondola safari
+    // as well.I wish to visit Bamse and his team there.”
+
+    string finalD = "I am going to visit Kolmården zoo tomorrow. I am a big fan of the dolphin show. I may watch all dolphin shows during the day. I would like to take a gondola safari as well. I wish to visit Bamse and his team there.";
+    finalD = finalD.Replace("I", "We");
+    finalD = finalD.Replace("am", "are");
+
+    WriteLine("\"I\" replaced with \"We\", and \"am\" with \"are\":");
+    WriteLine(finalD);
+
+    WriteLine("\n");
+
+
+    // E) Actual string is "She is the popul ar singer." and the expected string is "She is the most popular singer." 
+    string stringE = "She is the popul ar singer.";
+
+    stringE = stringE.Remove(16, 1);
+    stringE = stringE.Insert(stringE.IndexOf("popular"), "most ");
+
+    WriteLine(stringE);
+
+    WriteLine("\n");
+
+
+    // F) Actual string is "A friend is the asset of your life." and the expected string is "A true friend is the greatest asset of your life" 
+    string stringF = "A friend is the asset of your life.";
+
+    stringF = stringF.Insert(2, "true ");
+    stringF = stringF.Insert(stringF.IndexOf("asset"), "greatest ");
+
+    WriteLine(stringF);
+
+    WriteLine("\n");
+
+
+    // G) Actual string is "My name is Nalini Phopase." Expected string: "Nalini Phopase"
+    string stringG = "My name is Nalini Phopase.";
+
+    stringG = stringG.Trim('.');
+    stringG = stringG.Substring(stringG.IndexOf("Nalini"));
+
+    WriteLine(stringG);
+
+    WriteLine("\n");
+
+
+    // H) Actual string is "Arrays are very common in programming, they look something like: [1,2,3,4,5]" Expected string: "[1,4,5,6,7,8]"
+    string stringH = "Arrays are very common in programming, they look something like: [1,2,3,4,5]";
+
+    stringH = stringH.Substring(stringH.IndexOf('['));
+    stringH = stringH.Remove(2, 4);
+    stringH = stringH.Insert(6, ",6,7,8");
+
+    WriteLine(stringH);
+
+    WriteLine("\n");
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------
