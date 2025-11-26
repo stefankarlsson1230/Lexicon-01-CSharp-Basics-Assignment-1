@@ -1,4 +1,4 @@
-﻿# C-Sharp Basic Assignment 1
+﻿# C# Basic Assignment 1
 
 ## Prerequisite 
 You have to solve all the exercises in a single file. Just to make it more structured you have to solve each exercise in a separate method and call that method in a respective switch case. 
